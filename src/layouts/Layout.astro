@@ -1,0 +1,40 @@
+---
+import Footer from '../components/Footer.astro'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Vanila San José</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Huninn&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<main class="page">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #FFF0D1;
+		font-family: "Huninn", sans-serif;
+  		font-weight: 400;
+  		font-style: normal;
+	}
+
+	.page {
+		min-height: calc(100vh - 80px); /* Deja espacio para el footer */
+		display: block;
+	}
+</style>

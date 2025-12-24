@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Info from '../components/Info.astro';
+import Carousel from '../components/Carousel.astro';
+import CakeCard from '../components/CakeCard.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header/>
+	<Info/>
+	<Carousel/>
+
+	<section class="products">
+		<h2>Nuestros Pasteles</h2>
+		<div class="grid">
+			<CakeCard image="/img/vanila1.jpg" name="Pastel Vainilla" price="3.00" description="Clásico con crema batida y fresas." />
+			<CakeCard image="/img/vanila2.jpg" name="Pastel Chocolate" price="2.00" description="Capa rica de chocolate y ganache." />
+			<CakeCard image="/img/vanila3.jpg" name="Palmera" price="2.50" description="Tradicional con queso crema." />
+			<CakeCard image="/img/vanila4.jpg" name="Pastel Frutas" price="3.50" description="Ligero con frutas de temporada." />
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.products {
+		max-width: 1100px;
+		margin: 32px auto;
+		padding: 0 18px;
+	}
+
+	.products h2 {
+		margin: 0 0 16px 0;
+		color: #5b3f3f;
+		font-size: 1.3rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 18px;
+	}
+
+	@media (max-width: 640px) {
+		.products { margin: 20px auto; }
+	}
+</style>
